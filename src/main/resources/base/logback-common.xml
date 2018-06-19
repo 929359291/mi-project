@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+    <!-- 继承spring boot 提供的着色器 -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+    <property name="logDir" value="logs" />
+    <!-- 默认不会删除日志 -->
+    <property name="maxHistory" value="30"/>
+    <property name="maxFileSize" value="100MB"/>
+    <property name="asyncIncludeCallerData" value="false"/>
+    <springProperty name="APPLICATION_NAME" source="spring.application.name" defaultValue="UNKNOWN" />
+    <property name="ELK_LOG_HOME" value="/opt/finapp/elk_logs" />
+    <property name="totalSizeCap" value="100GB"/>
+    <!--<springProperty name="maxHistory" source="logging.extends.maxHistory" />-->
+    <property name="pattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} ${APPLICATION_NAME} %5p ${PID:- } %X{X-B3-TraceId:-} --- [%15.15t] %logger - %m%n"/>
+    <property name="CONSOLE_PATTERN" value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${APPLICATION_NAME}) %clr(%5p) %clr(${PID:- }){magenta} %clr(%X{X-B3-TraceId:-}) %clr(---){faint} %clr([%15.15t]){faint} %clr(%logger){cyan} %clr(-){faint} %m%n%wEx"/>
+    <logger name="com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver" level="ERROR"/>
+    <jmxConfigurator />
+
+</included>
