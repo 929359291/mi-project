@@ -1,0 +1,41 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+dsl-json
+elasticsearch
+hsweb-framework
+hutool
+iBase4J
+incubator-dubbo
+J2Cache
+java8-the-missing-tutorial
+java8-tutorial
+java-design-patterns
+paascloud-master
+spring-boot
+spring-cloud-examples
+SpringCloud-Learning
+SpringCloudLearning
+
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
